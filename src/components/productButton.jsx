@@ -1,10 +1,30 @@
-import React from "react";
+import { React, useEffect, useState } from "react";
 
 export default function ProductButton(props) {
   const { title, img, urlShopee, urlTokopedia } = props;
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const imageLoader = new Image();
+    imageLoader.src = img;
+    imageLoader.onload = () => {
+      setIsLoading(false); // Set isLoading menjadi false ketika gambar sudah selesai dimuat
+    };
+    imageLoader.onerror = () => {
+      console.error("Error loading image");
+      setIsLoading(false); // Jika terjadi kesalahan saat memuat gambar, tetap atur isLoading menjadi false
+    };
+  }, [img]); // Gunakan img sebagai dependency agar useEffect dipanggil kembali ketika img berubah
+
   return (
     <div className="w-full pb-4 bg-[#961d1e] rounded-xl">
-      <img src={img} alt={title} className="w-full rounded-t-xl" />
+      <div className="w-full">
+        {isLoading ? (
+          <div className="skeleton w-[168.01px] h-[168.01px] rounded-b-none" />
+        ) : (
+          <img src={img} alt={title} className="w-full rounded-t-xl" />
+        )}
+      </div>
       <div className="font-medium text-white mt-2 text-sm text-center px-2">
         {title}
       </div>

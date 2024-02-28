@@ -82,16 +82,16 @@ export default function Detail() {
               ""
             )}
 
-            <div className="col-span-2 row-start-2 flex flex-col justify-center items-center py-8 bg-[#961d1e] h-full rounded-xl">
-              <a
-                href={`https://api.whatsapp.com/send?phone=6285162880031&text=Halo,%20saya%20mau%20beli%20${encodeURIComponent(
-                  products.namaProduk
-                )}`}
-                target="_blank"
-              >
+            <a
+              href={`https://api.whatsapp.com/send?phone=6285162880031&text=Halo,%20saya%20mau%20beli%20${encodeURIComponent(
+                products.namaProduk
+              )}`}
+              target="_blank"
+            >
+              <div className="col-span-2 row-start-2 flex flex-col justify-center items-center py-8 bg-[#961d1e] h-full rounded-xl">
                 <img src="/logo-wa.png" alt="" className="w-12" />
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         </div>
       )}

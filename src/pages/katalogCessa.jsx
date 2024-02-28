@@ -1,9 +1,34 @@
 import BackButton from "@/components/backButton";
 import Layout from "@/components/layout";
 import ProductButton from "@/components/productButton";
-import React from "react";
+import { getProducts } from "@/utils/apis/products";
+import { React, useState, useEffect } from "react";
+import Lottie from "lottie-react";
+import loadingAnimation from "@/assets/loadingAnimation.json";
 
 export default function KatalogCessa() {
+  const [products, setProducts] = useState([]);
+  const [loading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  async function fetchData() {
+    try {
+      setIsLoading(true);
+      const result = await getProducts();
+      const filteredData = result.filter(
+        (item) => item.kategori === "Cessa Essential Oil Baby"
+      );
+      setProducts(filteredData);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
   return (
     <Layout>
       <BackButton />
@@ -32,8 +57,25 @@ export default function KatalogCessa() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 mb-8 gap-3 justify-items-center w-full px-5">
-        <ProductButton
+      <div
+        className={`${
+          loading ? "flex justify-center" : "grid grid-cols-2 md:grid-cols-3"
+        } mb-8 gap-3 justify-items-center w-full px-5`}
+      >
+        {loading ? (
+          <Lottie animationData={loadingAnimation} loop={true} />
+        ) : (
+          products.map((item) => (
+            <ProductButton
+              title={item.namaProduk}
+              img={item.img}
+              urlShopee={item.urlShopee}
+              urlTokopedia={item.urlTokopedia}
+              id={item.id}
+            />
+          ))
+        )}
+        {/* <ProductButton
           title="Cessa Baby Happy Nose - Melegakan Pernapasan"
           img="/cessa/happy-nose.jpg"
         />
@@ -56,7 +98,7 @@ export default function KatalogCessa() {
         <ProductButton
           title="Cessa Baby Itch Away - Menghidari Nyamuk/Serangga"
           img="/cessa/itch-away.jpg"
-        />
+        /> */}
       </div>
     </Layout>
   );

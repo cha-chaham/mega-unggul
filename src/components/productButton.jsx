@@ -1,5 +1,7 @@
 import { React, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Lottie from "lottie-react";
+import loadingAnimation from "@/assets/loadingAnimation.json";
 
 export default function ProductButton(props) {
   const { title, img, urlShopee, urlTokopedia, id } = props;
@@ -25,7 +27,7 @@ export default function ProductButton(props) {
     >
       <div className="w-full">
         {isLoading ? (
-          <div className="skeleton w-[168.01px] h-[168.01px] rounded-b-none" />
+          <Lottie animationData={loadingAnimation} loop={true} />
         ) : (
           <img
             src={img}

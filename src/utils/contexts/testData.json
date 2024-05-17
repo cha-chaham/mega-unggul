@@ -208,5 +208,25 @@
     "urlTokopedia": "",
     "deskripsi": "",
     "img": "/cessa/itch-away.jpg"
+  },
+  {
+    "id": "22",
+    "namaProduk": "Permainan Anak Bricks",
+    "kategori": "Permainan Bricks",
+    "harga": "15000",
+    "urlShopee": "https://shopee.co.id/Permainan-Balok-Susun-Anak-Bricks-Karakter-Kartun-i.27246883.28600170474?sp_atk=582d568f-4084-4215-bd02-5781643d801c&xptdk=582d568f-4084-4215-bd02-5781643d801c",
+    "urlTokopedia": "",
+    "deskripsi": "",
+    "img": "/bricks/bricks.jpg"
+  },
+  {
+    "id": "23",
+    "namaProduk": "Permainan Anak Bricks Lampu Diatas Bulang",
+    "kategori": "Permainan Bricks",
+    "harga": "30000",
+    "urlShopee": "https://shopee.co.id/Permainan-Balok-Susun-Anak-Bricks-Karakter-Kartun-Diatas-Bulan-Menyala-i.27246883.26550213842?xptdk=e681a043-1967-4029-aac3-5b5968a170c9",
+    "urlTokopedia": "",
+    "deskripsi": "",
+    "img": "/bricks/bricks-lampu.jpg"
   }
 ]

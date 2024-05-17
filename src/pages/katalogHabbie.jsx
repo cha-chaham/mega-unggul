@@ -76,7 +76,6 @@ export default function KatalogHabbie() {
               title={item.namaProduk}
               img={item.img}
               urlShopee={item.urlShopee}
-              urlTokopedia={item.urlTokopedia}
               id={item.id}
             />
           ))
@@ -102,7 +101,6 @@ export default function KatalogHabbie() {
               title={item.namaProduk}
               img={item.img}
               urlShopee={item.urlShopee}
-              urlTokopedia={item.urlTokopedia}
               id={item.id}
             />
           ))

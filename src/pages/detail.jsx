@@ -72,16 +72,6 @@ export default function Detail() {
             ) : (
               ""
             )}
-            {products.urlTokopedia && products.urlTokopedia.length > 0 ? (
-              <a href={products.urlTokopedia} target="_blank">
-                <div className="flex flex-col justify-center items-center bg-[#961d1e] h-full py-8 rounded-xl">
-                  <img src="/logo-tokped.png" alt="" className="w-12" />
-                </div>
-              </a>
-            ) : (
-              ""
-            )}
-
             <a
               href={`https://api.whatsapp.com/send?phone=6285162880031&text=Halo,%20saya%20mau%20beli%20${encodeURIComponent(
                 products.namaProduk

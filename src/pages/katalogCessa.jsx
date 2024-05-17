@@ -70,7 +70,6 @@ export default function KatalogCessa() {
               title={item.namaProduk}
               img={item.img}
               urlShopee={item.urlShopee}
-              urlTokopedia={item.urlTokopedia}
               id={item.id}
             />
           ))

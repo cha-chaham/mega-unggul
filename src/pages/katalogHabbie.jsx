@@ -6,6 +6,12 @@ import { getProducts } from "@/utils/apis/products";
 import Lottie from "lottie-react";
 import loadingAnimation from "@/assets/loadingAnimation.json";
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
+import teaLeaf from "/tea-leaf.svg"
+
 export default function KatalogHabbie() {
   const [products, setProducts] = useState([]);
   const [loading, setIsLoading] = useState(false);
@@ -20,6 +26,7 @@ export default function KatalogHabbie() {
     try {
       setIsLoading(true);
       const result = await getProducts();
+      setProducts(result)
       const filteredDataFlower = result.filter(
         (item) => item.kategori === "Habbie Flower Series"
       );
@@ -34,6 +41,24 @@ export default function KatalogHabbie() {
       setIsLoading(false);
     }
   }
+
+  var settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    arrows: false,
+  };
+
+  function shuffleArray(array) {
+    return array.sort(() => Math.random() - 0.5);
+  }
+
+  const shuffledProducts = shuffleArray(products);
 
   return (
     <Layout>
@@ -57,8 +82,16 @@ export default function KatalogHabbie() {
         </div>
       </div>
 
+{/*       <Slider {...settings} className="h-full mb-8 w-full" rtl>
+            {tea.map((item) => (
+              <a href={`details/${item.id}`}>
+                <img src={item.img} className="px-2"/>
+              </a>
+            ))}
+      </Slider> */}
+
       <div className="text-center flex flex-row justify-center gap-8 text-white font-semibold rounded-full mb-3 bg-[#2f7213] py-3 ">
-        <img src="/tea-leaf.svg" alt="" className="w-6" />
+        <img src={teaLeaf} alt="" className="w-6" />
         Tea Series
         <img src="/tea-leaf.svg" alt="" className="w-6" />
       </div>

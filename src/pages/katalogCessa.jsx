@@ -65,12 +65,13 @@ export default function KatalogCessa() {
         {loading ? (
           <Lottie animationData={loadingAnimation} loop={true} />
         ) : (
-          products.map((item) => (
+          products.map((item, index) => (
             <ProductButton
               title={item.namaProduk}
               img={item.img}
               urlShopee={item.urlShopee}
               id={item.id}
+              key={index}
             />
           ))
         )}

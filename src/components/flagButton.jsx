@@ -7,7 +7,7 @@ export default function FlagButton(props) {
     <>
       <a href={url} className="w-full">
         <div
-          className={`bg-[#961d1e] rounded-full hover:bg-[#861818] ease-in transition-all hover:scale-105 active:scale-110 flex ${
+          className={`bg-[#961d1e] rounded-lg hover:bg-[#861818] ease-in transition-all hover:scale-105 active:scale-110 flex ${
             flexRow ? "flex-col" : "flex-row"
           } text-center items-center py-3 px-8`}
         >

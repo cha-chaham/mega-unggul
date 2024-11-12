@@ -4,10 +4,17 @@ import ProductButton from "@/components/productButton";
 import Lottie from "lottie-react";
 import { React, useState, useEffect } from "react";
 import { getProducts } from "@/utils/apis/products";
+
 import loadingAnimation from "@/assets/loadingAnimation.json";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
 
 function App() {
   const [products, setProducts] = useState([]);
+  const [allProducts, setAllProducts] = useState([]);
   const [loading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -18,6 +25,7 @@ function App() {
     try {
       setIsLoading(true);
       const result = await getProducts();
+      setAllProducts(result)
       const filteredData = result.filter(
         (item) => item.kategori === "Permainan Bricks"
       );
@@ -28,6 +36,24 @@ function App() {
       setIsLoading(false);
     }
   }
+
+  var settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    arrows: false,
+  };
+
+  function shuffleArray(array) {
+    return array.sort(() => Math.random() - 0.5);
+  }
+
+  const shuffledProducts = shuffleArray(allProducts);
 
   return (
     <Layout>
@@ -45,6 +71,14 @@ function App() {
             Terhubunglah bersama kami melalui channel informasi kami dibawah ini
           </div>
         </div>
+
+        <Slider {...settings} className="h-full mb-4 w-full">
+            {shuffledProducts.map((item) => (
+              <a href={`details/${item.id}`}>
+                <img src={item.img} className="px-1 rounded-lg"/>
+              </a>
+            ))}
+        </Slider>
 
         <div
           id="content"

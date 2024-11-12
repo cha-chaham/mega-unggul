@@ -43,7 +43,7 @@ export default function ProductButton(props) {
       >
         {title}
       </div>
-      <div className="flex justify-center items-center mt-2 gap-2">
+      <div className="flex justify-center items-center mt-2 gap-3">
         <a href={urlShopee} target="_blank">
           <img src="/logo-shopee.png" alt="" className="w-8" />
         </a>

@@ -27,7 +27,9 @@ export default function ProductButton(props) {
     >
       <div className="w-full">
         {isLoading ? (
-          <Lottie animationData={loadingAnimation} loop={true} />
+          <div class="animate-pulse flex gap-3 w-full mb-4">
+            <div class="bg-slate-700 w-full h-48 rounded-xl"></div>
+          </div>
         ) : (
           <img
             src={img}

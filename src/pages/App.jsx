@@ -82,9 +82,13 @@ function App() {
       ) : (
         <Slider {...settings} className="h-full mb-4 w-full">
         {shuffledProducts.map((item) => (
-          <a href={`details/${item.id}`}>
+          loading ? (
+          <div class="animate-pulse flex gap-3 w-full mb-4">
+            <div class="bg-slate-700 w-full h-48 rounded-xl"></div>
+          </div>) : (<a href={`details/${item.id}`}>
             <img src={item.img} className="px-1 rounded-lg"/>
-          </a>
+          </a>)
+
         ))}
     </Slider>
       )}

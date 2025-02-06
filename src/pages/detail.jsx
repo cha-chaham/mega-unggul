@@ -73,7 +73,7 @@ export default function Detail() {
               ""
             )}
             <a
-              href={`https://api.whatsapp.com/send?phone=6285162880031&text=Halo,%20saya%20mau%20beli%20${encodeURIComponent(
+              href={`https://api.whatsapp.com/send?phone=628114450031&text=Halo,%20saya%20mau%20beli%20${encodeURIComponent(
                 products.namaProduk
               )}`}
               target="_blank"

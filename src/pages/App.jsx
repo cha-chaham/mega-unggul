@@ -72,13 +72,22 @@ function App() {
           </div>
         </div>
 
+      {loading ? (
+      <div class="animate-pulse flex gap-3 w-full mb-4">
+        <div class="bg-slate-700 w-full h-48 rounded-xl"></div>
+        <div class="bg-slate-700 w-full h-48 rounded-xl"></div>
+        <div class="bg-slate-700 w-full h-48 rounded-xl"></div>
+
+      </div>
+      ) : (
         <Slider {...settings} className="h-full mb-4 w-full">
-            {shuffledProducts.map((item) => (
-              <a href={`details/${item.id}`}>
-                <img src={item.img} className="px-1 rounded-lg"/>
-              </a>
-            ))}
-        </Slider>
+        {shuffledProducts.map((item) => (
+          <a href={`details/${item.id}`}>
+            <img src={item.img} className="px-1 rounded-lg"/>
+          </a>
+        ))}
+    </Slider>
+      )}
 
         <div
           id="content"
@@ -97,6 +106,13 @@ function App() {
               img="/logo-cessa.png"
               flexRow="false"
             />
+          {/* <div className="flex col-span-2">
+            <FlagButton
+            title="Katalog Snack CMI"
+            url="/"
+            img="/logo-cmi.png"
+            />
+          </div> */}
             {loading ? (
               <div className="flex flex-row col-span-2 gap-4">
                 <div class="bg-[#961d1e] shadow rounded-2xl max-w-sm w-full mx-auto">
@@ -132,7 +148,7 @@ function App() {
               </div>
             ) : (
               products.map((item) => (
-                <ProductButton
+                  <ProductButton
                   title={item.namaProduk}
                   img={item.img}
                   urlShopee={item.urlShopee}
@@ -149,7 +165,7 @@ function App() {
           />
           <FlagButton
             title="Hubungi Kami di Whatsapp"
-            url="https://wa.me/6285162880031"
+            url="https://wa.me/628114450031"
             img="/logo-wa.png"
             subTitle="Untuk Area Kota Palu dan Pembelian Jumlah Banyak"
           />

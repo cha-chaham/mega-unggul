@@ -46,9 +46,9 @@ export default function ProductButton(props) {
         {title}
       </div>
       <div className="flex justify-center items-center mt-2 gap-3">
-        <a href={urlShopee} target="_blank">
+        {urlShopee && (        <a href={urlShopee} target="_blank">
           <img src="/logo-shopee.png" alt="" className="w-8" />
-        </a>
+        </a>)}
         {/* <a href={urlTokopedia} target="_blank">
           <img src="/logo-tokped.png" alt="" className="w-8" />
         </a> */}

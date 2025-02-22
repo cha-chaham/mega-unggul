@@ -9,7 +9,7 @@ export default function NotFound() {
       <div className="text-black flex flex-col justify-center items-center h-screen">
         404 Not Found
         <button
-          onClick={() => navigate(-1)}
+          onClick={() => navigate("/")}
           className="mt-4 btn bg-[#961d1e] text-white"
         >
           Kembali

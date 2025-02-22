@@ -110,13 +110,13 @@ function App() {
               img="/logo-cessa.png"
               flexRow="false"
             />
-          {/* <div className="flex col-span-2">
+          <div className="flex col-span-2">
             <FlagButton
             title="Katalog Snack CMI"
-            url="/"
+            url="/katalog-cmi"
             img="/logo-cmi.png"
             />
-          </div> */}
+          </div>
             {loading ? (
               <div className="flex flex-row col-span-2 gap-4">
                 <div class="bg-[#961d1e] shadow rounded-2xl max-w-sm w-full mx-auto">

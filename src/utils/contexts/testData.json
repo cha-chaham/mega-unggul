@@ -228,5 +228,125 @@
     "urlTokopedia": "",
     "deskripsi": "",
     "img": "/bricks/bricks-lampu.jpg"
+  },
+  {
+    "id": "24",
+    "namaProduk": "Mie Lidi - Balado",
+    "kategori": "Mie Lidi",
+    "harga": "3000",
+    "urlShopee": "",
+    "urlTokopedia": "",
+    "deskripsi": "",
+    "img": "/snack/mie-balado.jpg"
+  },
+  {
+    "id": "25",
+    "namaProduk": "Mie Lidi - Pedas Daun Jeruk",
+    "kategori": "Mie Lidi",
+    "harga": "3000",
+    "urlShopee": "",
+    "urlTokopedia": "",
+    "deskripsi": "",
+    "img": "/snack/mie-pedas-jeruk.jpg"
+  },
+  {
+    "id": "26",
+    "namaProduk": "Mie Lidi - BBQ",
+    "kategori": "Mie Lidi",
+    "harga": "3000",
+    "urlShopee": "",
+    "urlTokopedia": "",
+    "deskripsi": "",
+    "img": "/snack/mie-bbq.jpg"
+  },
+  {
+    "id": "26",
+    "namaProduk": "Basreng - Pedas Daun Jeruk",
+    "kategori": "Basreng",
+    "harga": "3000",
+    "urlShopee": "",
+    "urlTokopedia": "",
+    "deskripsi": "",
+    "img": "/snack/basreng-pedas-jeruk.jpg"
+  },
+  {
+    "id": "27",
+    "namaProduk": "Basreng - Pedas",
+    "kategori": "Basreng",
+    "harga": "3000",
+    "urlShopee": "",
+    "urlTokopedia": "",
+    "deskripsi": "",
+    "img": "/snack/basreng-pedas.jpg"
+  },
+  {
+    "id": "28",
+    "namaProduk": "Basreng - bbq",
+    "kategori": "Basreng",
+    "harga": "3000",
+    "urlShopee": "",
+    "urlTokopedia": "",
+    "deskripsi": "",
+    "img": "/snack/basreng-bbq.jpg"
+  },
+  {
+    "id": "29",
+    "namaProduk": "Basreng - Sambalado",
+    "kategori": "Basreng",
+    "harga": "3000",
+    "urlShopee": "",
+    "urlTokopedia": "",
+    "deskripsi": "",
+    "img": "/snack/basreng-sambalado.jpg"
+  },
+  {
+    "id": "30",
+    "namaProduk": "Makaroni - Keju",
+    "kategori": "Makaroni",
+    "harga": "3000",
+    "urlShopee": "",
+    "urlTokopedia": "",
+    "deskripsi": "",
+    "img": "/snack/makaroni-keju.jpg"
+  },
+  {
+    "id": "31",
+    "namaProduk": "Makaroni - Pedas",
+    "kategori": "Makaroni",
+    "harga": "3000",
+    "urlShopee": "",
+    "urlTokopedia": "",
+    "deskripsi": "",
+    "img": "/snack/makaroni-pedas.jpg"
+  },
+  {
+    "id": "32",
+    "namaProduk": "Usus Goreng - Original Asin",
+    "kategori": "Usus Goreng",
+    "harga": "3000",
+    "urlShopee": "",
+    "urlTokopedia": "",
+    "deskripsi": "",
+    "img": "/snack/usus-original.jpg"
+  },
+  {
+    "id": "33",
+    "namaProduk": "Usus Goreng - Balado",
+    "kategori": "Usus Goreng",
+    "harga": "3000",
+    "urlShopee": "",
+    "urlTokopedia": "",
+    "deskripsi": "",
+    "img": "/snack/usus-balado.jpg"
+  },
+  {
+    "id": "34",
+    "namaProduk": "Usus Goreng - Pedas",
+    "kategori": "Usus Goreng",
+    "harga": "3000",
+    "urlShopee": "",
+    "urlTokopedia": "",
+    "deskripsi": "",
+    "img": "/snack/usus-pedas.jpg"
   }
 ]

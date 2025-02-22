@@ -9,6 +9,7 @@ import App from "@/pages/App";
 import NotFound from "@/pages/NotFound";
 import KatalogHabbie from "@/pages/katalogHabbie";
 import KatalogCessa from "@/pages/katalogCessa";
+import KatalogSnack from "@/pages/katalogSnack";
 import { setAxiosWithConfig } from "@/utils/apis/axiosWithConfig";
 import Detail from "@/pages/detail";
 
@@ -34,6 +35,11 @@ export default function Router() {
     {
       path: "/katalog-cessa",
       element: <KatalogCessa />,
+      title: "Beranda",
+    },
+    {
+      path: "/katalog-cmi",
+      element: <KatalogSnack />,
       title: "Beranda",
     },
     {

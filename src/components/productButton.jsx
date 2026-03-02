@@ -53,7 +53,7 @@ export default function ProductButton(props) {
           <img src="/logo-tokped.png" alt="" className="w-8" />
         </a> */}
         <a
-          href={`https://api.whatsapp.com/send?phone=6285162880031&text=Halo,%20saya%20mau%20beli%20${encodeURIComponent(
+          href={`https://api.whatsapp.com/send?phone=628114450031&text=Halo,%20saya%20mau%20beli%20${encodeURIComponent(
             title
           )}`}
           target="_blank"
@@ -64,3 +64,4 @@ export default function ProductButton(props) {
     </div>
   );
 }
+

@@ -27,7 +27,7 @@ function App() {
       const result = await getProducts();
       setAllProducts(result)
       const filteredData = result.filter(
-        (item) => item.kategori === "Permainan Bricks"
+        (item) => item.kategori === "Hampers"
       );
       setProducts(filteredData);
     } catch (error) {
@@ -72,7 +72,7 @@ function App() {
           </div>
         </div>
 
-      {loading ? (
+      {/* {loading ? (
       <div class="animate-pulse flex gap-3 w-full mb-4">
         <div class="bg-slate-700 w-full h-48 rounded-xl"></div>
         <div class="bg-slate-700 w-full h-48 rounded-xl"></div>
@@ -91,7 +91,7 @@ function App() {
 
         ))}
     </Slider>
-      )}
+      )} */}
 
         <div
           id="content"
@@ -110,33 +110,11 @@ function App() {
               img="/logo-cessa.png"
               flexRow="false"
             />
-          <div className="flex col-span-2">
-            <FlagButton
-            title="Katalog Snack CMI"
-            url="/katalog-cmi"
-            img="/logo-cmi.png"
-            />
-          </div>
             {loading ? (
-              <div className="flex flex-row col-span-2 gap-4">
-                <div class="bg-[#961d1e] shadow rounded-2xl max-w-sm w-full mx-auto">
+              <div className="flex flex-row col-span-2">
+                <div class="bg-[#961d1e] shadow rounded-2xl max-w-s w-full mx-auto">
                   <div class="animate-pulse flex flex-col">
-                    <div class="bg-slate-700 w-full h-48 rounded-t-xl"></div>
-                    <div class="flex-1 px-4 space-y-6 py-4">
-                      <div class="h-2 bg-slate-700 rounded"></div>
-                      <div class="space-y-3">
-                        <div class="grid grid-cols-3 gap-4">
-                          <div class="h-2 bg-slate-700 rounded col-span-2"></div>
-                          <div class="h-2 bg-slate-700 rounded col-span-1"></div>
-                        </div>
-                        <div class="h-2 bg-slate-700 rounded"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="bg-[#961d1e] shadow rounded-2xl max-w-sm w-full mx-auto">
-                  <div class="animate-pulse flex flex-col">
-                    <div class="bg-slate-700 w-full h-48 rounded-t-xl"></div>
+                    <div class="bg-slate-700 w-full h-96 rounded-t-xl"></div>
                     <div class="flex-1 px-4 space-y-6 py-4">
                       <div class="h-2 bg-slate-700 rounded"></div>
                       <div class="space-y-3">
@@ -152,12 +130,12 @@ function App() {
               </div>
             ) : (
               products.map((item) => (
-                  <ProductButton
+                <div className="flex col-span-2"> <ProductButton
                   title={item.namaProduk}
                   img={item.img}
                   urlShopee={item.urlShopee}
                   id={item.id}
-                />
+                /></div>
               ))
             )}
           </div>
